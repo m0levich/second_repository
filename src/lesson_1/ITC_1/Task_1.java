@@ -1,6 +1,5 @@
-package ITC_1.main;
+package lesson_1.ITC_1;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Task_1 {
