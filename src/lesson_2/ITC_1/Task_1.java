@@ -21,7 +21,7 @@ public class Task_1 {
         int balance = 0;
         while(true){
             if (balance != 0){
-                System.out.println("Ваш баланс: "+ balance +" руб. Чтобы забрать сдачу, напишите 1, либо любое число, чтобы продолжить");
+                System.out.println("Ваш баланс: "+ balance +" руб. Чтобы забрать сдачу, введите 1, либо любое число, чтобы продолжить");
                 int answer = scanner.nextInt();
                 if (answer == 1){
                     balance = 0;
@@ -55,6 +55,7 @@ public class Task_1 {
             }
             else {
                 System.out.println("Недостаточно средств");
+                System.out.println();
                 continue;
             }
         }
