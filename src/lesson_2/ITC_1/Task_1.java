@@ -31,7 +31,7 @@ public class Task_1 {
                 }
             }
             for (int i = 0; i < beverages.length; i++){
-                System.out.println("№ "+ (i+1) +". Напиток: "+ beverages[i].name + " Цена: "+ beverages[i].price +" руб. Объем: "+ beverages[i].volume + " л");
+                System.out.println("№ "+ (i+1) +". Напиток: "+ beverages[i].name + " Цена: "+ beverages[i].price +" руб. Объем: "+ beverages[i].volume + " л " + "Остаток " + beverages[i].count);
             }
             int number = 0;
             System.out.println();
@@ -45,11 +45,17 @@ public class Task_1 {
             }
             else System.out.println("Вы выбрали напиток " + number + ", его цена: " + beverages[number-1].price + " руб");
 
+            if (beverages[number-1].count <= 0){
+                System.out.println("Напиток закончился\n");
+                continue;
+            }
+
             System.out.print("Ваш баланс равен: " + balance + " руб. Пополните баланс: ");
             balance += scanner.nextInt();
 
             if (balance >= beverages[number-1].price){
                 System.out.println("Возьмите ваш напиток");
+                beverages[number-1].count--;
                 System.out.println();
                 balance -= beverages[number-1].price;
             }
