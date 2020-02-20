@@ -33,6 +33,8 @@ public class Task_2 {
         for (int i = 0; i < n; i++) {
             sumDiagonal += array[i][i] + array[i][n - i - 1];
         }
+
+        //решил не складывать центральное число, если размер нечетный, поэтому вычел его из суммы 2-х диагоналей
         if (n % 2 != 0) {
             sumDiagonal -= array[(n - 1) / 2][(n - 1) / 2];
         }
