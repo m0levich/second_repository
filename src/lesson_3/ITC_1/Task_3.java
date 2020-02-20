@@ -10,13 +10,14 @@ public class Task_3 {
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
-    public static void run (int n){
+    public void run (int n){
         System.out.println("Число Фибоначчи равно: " + fibonacci(n));
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите искомое число Фибоначчи: ");
         int n = scanner.nextInt();
-        run(n);
+        Task_3 task = new Task_3();
+        task.run(n);
     }
 }
