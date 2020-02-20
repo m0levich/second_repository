@@ -18,8 +18,7 @@ public class Task_4 {
         int c = scanner.nextInt();
 
         System.out.println("Результат: ");
-        for (int i = 0; i < a; i++)
-        {
+        for (int i = 0; i < a; i++) {
             System.out.print(c + " ");
             if (i != a - 1) c *= b;
         }

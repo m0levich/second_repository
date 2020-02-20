@@ -10,20 +10,20 @@ public class Task_2 {
         System.out.print("Введите размер массива: ");
         int n = scanner.nextInt();
 
-        int array [][] = new int[n][n];
+        int array[][] = new int[n][n];
 
         Random random = new Random();
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                array [i][j] = random.nextInt(10);
+                array[i][j] = random.nextInt(10);
             }
         }
 
         System.out.println("\nРезультат рандома: ");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.print(array [i][j] + " ");
+                System.out.print(array[i][j] + " ");
             }
             System.out.println();
         }
@@ -31,10 +31,10 @@ public class Task_2 {
         int sumDiagonal = 0;
 
         for (int i = 0; i < n; i++) {
-                sumDiagonal += array[i][i] + array[i][n - i - 1];
+            sumDiagonal += array[i][i] + array[i][n - i - 1];
         }
-        if(n%2!=0){
-            sumDiagonal -= array[(n-1)/2][(n-1)/2];
+        if (n % 2 != 0) {
+            sumDiagonal -= array[(n - 1) / 2][(n - 1) / 2];
         }
 
         System.out.println("\nСумма диагонали массива равна: " + sumDiagonal);

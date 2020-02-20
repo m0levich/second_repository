@@ -6,7 +6,7 @@ public class Beverage {
     float volume;
     int count;
 
-    public Beverage(String name, int price, float volume){
+    public Beverage(String name, int price, float volume) {
         this.name = name;
         this.price = price;
         this.volume = volume;
