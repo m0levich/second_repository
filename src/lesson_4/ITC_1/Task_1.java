@@ -12,7 +12,7 @@ public class Task_1 {
 
 
     public final static String censure(String s) {
-        final String s2 = s.replaceAll("бяка", "вырезано цензурой");
+        final String s2 = s.replaceAll("[б-бБ-Б][я-яЯ-Я][к-кК-К][а-аА-А]", "вырезано цензурой");
         return s2;
     }
 }
