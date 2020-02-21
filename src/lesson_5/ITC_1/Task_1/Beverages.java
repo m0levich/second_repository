@@ -1,4 +1,4 @@
-package lesson_5.ITC_1;
+package lesson_5.ITC_1.Task_1;
 
 public enum Beverages {
     Sprite("Sprite", 55, 0.33f),
