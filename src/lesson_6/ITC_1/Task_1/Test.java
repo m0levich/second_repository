@@ -10,8 +10,11 @@ public class Test {
 
         Set set = new TreeSet(personSuperComparator);
         set.add(new Person(23, "Егор"));
-        set.add(new Person(21, "Пётр"));
+        set.add(new Person(30, "Петр"));
+        set.add(new Person(21, "Егор"));
         set.add(new Person(30, "Василий"));
+        set.add(new Person(32, "Петр"));
+        set.add(new Person(21, "Петр"));
 
         for (Object o : set) {
             System.out.println(o);
