@@ -5,18 +5,18 @@ import java.util.Scanner;
 public class Task_1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Beverage drink_1 = new Beverage("Sprite", 55, 0.33f);
-        Beverage drink_2 = new Beverage("Coca-cola", 50, 0.33f);
-        Beverage drink_3 = new Beverage("Fanta", 65, 0.5f);
-        Beverage drink_4 = new Beverage("7UP", 55, 0.33f);
-        Beverage drink_5 = new Beverage("Moutain Dew", 55, 0.5f);
-        Beverage drink_6 = new Beverage("Sprite", 55, 0.33f);
-        Beverage drink_7 = new Beverage("Pepsi", 75, 0.5f);
-        Beverage drink_8 = new Beverage("Burn", 87, 0.33f);
-        Beverage drink_9 = new Beverage("Red Bull", 105, 0.5f);
-        Beverage drink_10 = new Beverage("BonAqua", 40, 0.5f);
+        Beverage drink1 = new Beverage("Sprite", 55, 0.33f);
+        Beverage drink2 = new Beverage("Coca-cola", 50, 0.33f);
+        Beverage drink3 = new Beverage("Fanta", 65, 0.5f);
+        Beverage drink4 = new Beverage("7UP", 55, 0.33f);
+        Beverage drink5 = new Beverage("Moutain Dew", 55, 0.5f);
+        Beverage drink6 = new Beverage("Sprite", 55, 0.33f);
+        Beverage drink7 = new Beverage("Pepsi", 75, 0.5f);
+        Beverage drink8 = new Beverage("Burn", 87, 0.33f);
+        Beverage drink9 = new Beverage("Red Bull", 105, 0.5f);
+        Beverage drink10 = new Beverage("BonAqua", 40, 0.5f);
 
-        Beverage[] beverages = new Beverage[]{drink_1, drink_2, drink_3, drink_4, drink_5, drink_6, drink_7, drink_8, drink_9, drink_10};
+        Beverage[] beverages = new Beverage[]{drink1, drink2, drink3, drink4, drink5, drink6, drink7, drink8, drink9, drink10};
 
         int balance = 0;
         while (true) {
@@ -31,21 +31,20 @@ public class Task_1 {
                 }
             }
             for (int i = 0; i < beverages.length; i++) {
-                System.out.println("№ " + (i + 1) + ". Напиток: " + beverages[i].name + " Цена: " + beverages[i].price + " руб. Объем: " + beverages[i].volume + " л " + "Остаток " + beverages[i].count);
+                System.out.println("№ " + (i + 1) + ". Напиток: " + beverages[i].getName() + " Цена: " + beverages[i].getPrice() + " руб. Объем: " + beverages[i].getVolume() + " л " + "Остаток " + beverages[i].getCount());
             }
-            int number = 0;
-            System.out.println();
-            System.out.print("Введите номер напитка: ");
-            number = scanner.nextInt();
+            System.out.print("\nВведите номер напитка или введите 0 для выхода из программы: ");
+            int number = scanner.nextInt();
+
+            if (number == 0) break;
 
             if (number > beverages.length || number < 1) {
-                System.out.println("Такого номера напитка нет");
-                System.out.println();
+                System.out.println("Такого номера напитка нет\n");
                 continue;
             } else
-                System.out.println("Вы выбрали напиток " + number + ", его цена: " + beverages[number - 1].price + " руб");
+                System.out.println("Вы выбрали напиток " + number + ", его цена: " + beverages[number - 1].getPrice() + " руб");
 
-            if (beverages[number - 1].count <= 0) {
+            if (beverages[number - 1].getCount() <= 0) {
                 System.out.println("Напиток закончился\n");
                 continue;
             }
@@ -53,14 +52,12 @@ public class Task_1 {
             System.out.print("Ваш баланс равен: " + balance + " руб. Пополните баланс: ");
             balance += scanner.nextInt();
 
-            if (balance >= beverages[number - 1].price) {
-                System.out.println("Возьмите ваш напиток");
-                beverages[number - 1].count--;
-                System.out.println();
-                balance -= beverages[number - 1].price;
+            if (balance >= beverages[number - 1].getPrice()) {
+                System.out.println("Возьмите ваш напиток\n");
+                beverages[number - 1].setCount(beverages[number - 1].getCount() - 1);
+                balance -= beverages[number - 1].getPrice();
             } else {
-                System.out.println("Недостаточно средств");
-                System.out.println();
+                System.out.println("Недостаточно средств\n");
                 continue;
             }
         }
