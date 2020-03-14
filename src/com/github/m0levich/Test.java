@@ -8,6 +8,7 @@ public class Test {
         System.out.println("Четвертая строка");
         System.out.println("Пятая строка");
         System.out.println("Шестая строка");
-//        System.out.println("Седьмая строка");
+        System.out.println("Седьмая строка");
+        System.out.println("Восьмая строка");
     }
 }
