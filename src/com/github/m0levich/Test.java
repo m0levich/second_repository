@@ -10,7 +10,8 @@ public class Test {
         System.out.println("Шестая строка");
         System.out.println("Седьмая строка");
         System.out.println("Восьмая строка");
-        System.out.println("Строка номер 9");
+        System.out.println("Девятая строка");
         System.out.println("Десятая строка");
+        System.out.println("Одиннадцатая строка");
     }
 }
